@@ -168,8 +168,7 @@ def player_numbers(team) #accepts an argument and #expects an a new array of num
    def player_stats (name)
      game_hash.each do |team_side, team_details|
       team_details.each do | category, player_details|
-     team_details[:players].each do | player_name_key, player_stats|
-
+      team_details[:players].each do | player_name_key, player_stats|
               if player_name_key == name
                 return player_stats
              end
