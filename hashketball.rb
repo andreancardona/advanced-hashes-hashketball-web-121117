@@ -125,6 +125,8 @@ def get_all_players #New array gets all the names of the players
     end
   end
 end
+  return names_of_players
+
 
 all_players = get_all_players()
 puts all_players.class
