@@ -116,6 +116,16 @@ def game_hash
  }
  end
 
+def get_all_players #New array gets all the names of the players
+  names_of_players =[]
+   game_hash.each do |team_side, team_details| #iterate through top-level hash
+
+
+end
+
+puts get_all_players()
+
+
  def num_points_scored(player_name)
     game_hash.each do |team_side, team_details|
       team_details[:players].each do | name_key, player_stats|
