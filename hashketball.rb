@@ -151,6 +151,6 @@ def game_hash
      if team_side == :team_name
      team_names_array << team_name.values
   end
-end 
+end
     return team_names_array.flatten
  end
