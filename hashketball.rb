@@ -119,9 +119,9 @@ def game_hash
 def get_all_players #New array gets all the names of the players
   game_hash.map do |team_side, team_details| #iterate through top-level hash
     team_details[:players].keys #returns an array
-  end
+  end.flatten
 end
-
+[['bill', 'bob', 'martha'], ['angelica', 'jessy', 'aaron']]
 
 all_players = get_all_players()
 puts all_players.count
