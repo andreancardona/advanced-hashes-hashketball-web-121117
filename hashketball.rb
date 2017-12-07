@@ -123,10 +123,11 @@ def get_all_players #New array gets all the names of the players
     team_details[:players].keys.each do | name | #accessing player keys iterating over names
       names_of_players << name
     end
-  end 
+  end
 end
 
-puts get_all_players()
+all_players = get_all_players()
+puts all_players.class
 
 
  def num_points_scored(player_name)
