@@ -124,8 +124,8 @@ def get_all_players #New array gets all the names of the players
       names_of_players << name
     end
   end
-end
   return names_of_players
+end
 
 
 all_players = get_all_players()
