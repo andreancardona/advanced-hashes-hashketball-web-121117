@@ -147,7 +147,7 @@ def game_hash
 
  def team_names #expects new array
     team_names_array = []
-   game_hash.each do |team_side, team_details|
+    game_hash.each do |team_side, team_details|
       team_names_array << team_details[:team_name]
     end
     return team_names_array
