@@ -118,9 +118,7 @@ def game_hash
 
 def get_all_players #New array gets all the names of the players
   game_hash.map do |team_side, team_details| #iterate through top-level hash
-    # team_details => :team_name, :colors, :players
-    team_details[:players].keys.each do | name | #accessing player keys iterating over names
-    end
+    team_details[:players].keys
   end
   return names_of_players
 end
