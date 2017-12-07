@@ -152,3 +152,13 @@ def game_hash
     end
     return team_names_array
   end
+
+  def num_points_scored(player_name)
+     game_hash.each do |team_side, team_details|
+       team_details[:players].each do | name_key, player_stats|
+         if name_key == player_name
+           return player_stats[:number]
+         end
+       end
+     end
+   end
