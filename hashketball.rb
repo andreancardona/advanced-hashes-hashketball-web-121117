@@ -117,9 +117,15 @@ def game_hash
  end
 
  def get_all_player_names
-   game_hash.values.collect do | team_details |
-     team_details[:players].keys
-   end.flatten
+   player_names = []
+   game_hash.each do | team_side , team_details |
+     team_details.each do | category, details |
+       if category == :players
+         player_names << details.keys
+       end
+     end
+   end
+   return player_names.flatten
  end
 
  player_names = get_all_player_names
