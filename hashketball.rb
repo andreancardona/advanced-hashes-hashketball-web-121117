@@ -166,7 +166,7 @@ def player_numbers(team) #accepts an argument and #expects an a new array of num
    end
 
 
-   def big_shoe_rebounds #does NOT accept an argument 
+   def big_shoe_rebounds #does NOT accept an argument
     rebound = 0
     shoe_size = 0
     game_hash.each do |team_side, team_details|
