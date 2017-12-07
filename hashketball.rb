@@ -120,7 +120,7 @@ def game_hash
     game_hash.each do |team_side, team_details|
       team_details[:players].each do | name, player_stats|
         if name == player_name
-          return player_stats[:points]
+          puts player_stats[:points]
         end
       end
     end
