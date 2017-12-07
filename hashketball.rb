@@ -164,3 +164,18 @@ def player_numbers(team) #accepts an argument and #expects an a new array of num
      end
      return team_side_array
    end
+
+
+   def big_shoe_rebounds #does NOT accept an argument 
+    rebound = 0
+    shoe_size = 0
+   game_hash.each do |team, data|
+    data[:players].each do |players, stats|
+       if stats[:shoe] > shoe_size
+         shoe_size = stats[:shoe]
+         rebound = stats[:rebounds]
+       end
+     end
+   end
+   return rebound
+end
