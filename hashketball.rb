@@ -129,7 +129,7 @@ end
 
 
 all_players = get_all_players()
-puts all_players.class
+puts all_players
 
 
  def num_points_scored(player_name)
