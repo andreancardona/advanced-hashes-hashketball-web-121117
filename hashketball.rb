@@ -133,14 +133,14 @@ def game_hash
  puts player_names.count
 
  def num_points_scored(player_name)
-    game_hash.each do |team_side, team_details|
-    team_details[:players].each do |player_hash, player_stats|
-      if player_stats[:name] == player_name
-      return player_stats[:stats][:points]
+   game_hash.each do |location, team_data|
+     team_data[:players].each do |player, p_hash|
+      if p_hash[:name] == player_name
+       return p_hash[:stats][:points]
    end 
-  end 
- end 
-end 
+  end
+ end
+end
 
   def shoe_size(player_name)
     game_hash.each do |team, data|
