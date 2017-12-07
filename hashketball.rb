@@ -136,3 +136,12 @@ def game_hash
        end
      end
    end
+
+
+   def team_colors(name)
+     game_hash.each do |team_side, team_details|
+       if team_side == name
+         return team_details[:colors]
+      end
+   end
+ end 
