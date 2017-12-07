@@ -144,4 +144,4 @@ def game_hash
          return team_details[:colors]
       end
    end
- end 
+ end
