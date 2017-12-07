@@ -174,7 +174,6 @@ def player_numbers(team) #accepts an argument and #expects an a new array of num
                 return player_stats
              end
             end
-          end
         end
       end
     end
