@@ -171,7 +171,6 @@ def player_numbers(team) #accepts an argument and #expects an a new array of num
               if player_name_key == name
                 return player_stats
              end
-            end
         end
       end
     end
