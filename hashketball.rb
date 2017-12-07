@@ -146,11 +146,11 @@ def game_hash
  end
 
  def team_names
-    team_arr = []
+    team_names_arrayarr = []
     game_hash.each do |home_away, info|
-      team_arr << info[:team_name]
+      team_names_array << info[:team_name]
     end
-    team_arr
+    team_names_array
   end
 
  #def team_names #expect a new array
