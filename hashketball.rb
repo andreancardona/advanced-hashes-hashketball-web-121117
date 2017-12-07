@@ -153,12 +153,14 @@ def game_hash
     return team_names_array
   end
 
-  def num_points_scored(player_name)
+def player_numbers(team_side) #accepts an argument and #expects an a new array of numbers
+     team_side_array = []
      game_hash.each do |team_side, team_details|
        team_details[:players].each do | name_key, player_stats|
-         if name_key == player_name
-           return player_stats[:number]
+         if team_details[:team_name] == team
+           team_side_array << player_stats[:number]
          end
        end
      end
+     return team_side_array
    end
