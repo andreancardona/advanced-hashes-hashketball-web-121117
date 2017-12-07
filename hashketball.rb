@@ -156,7 +156,7 @@ def game_hash
 def player_numbers(team) #accepts an argument and #expects an a new array of numbers
      team_side_array = []
      game_hash.each do |team_side, team_details|
-      team_details[:players].each do | name_key, player_stats|
+      team_details[:players].each do | player_name_key, player_stats|
          if team_details[:team_name] == team
            team_side_array << player_stats[:number]
          end
