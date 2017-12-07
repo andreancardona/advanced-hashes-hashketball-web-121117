@@ -168,9 +168,9 @@ def player_numbers(team) #accepts an argument and #expects an a new array of num
    def player_stats (name)
      game_hash.each do |team_side, team_details|
       team_details.each do | category, player_details|
-          if category == :players
-            player_details.each do |player_name, player_stats|
-              if player_name == name
+     team_details[:players].each do | player_name_key, player_stats|
+      
+              if player_name_key == name
                 return player_stats
              end
             end
@@ -178,7 +178,7 @@ def player_numbers(team) #accepts an argument and #expects an a new array of num
         end
       end
     end
-    
+
    def big_shoe_rebounds #does NOT accept an argument
     rebound_number = 0
     shoe_size = 0
