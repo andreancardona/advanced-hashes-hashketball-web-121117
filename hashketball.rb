@@ -145,20 +145,10 @@ def game_hash
    end
  end
 
- def team_names
+ def team_names #expects new array
     team_names_array = []
    game_hash.each do |team_side, team_details|
       team_names_array << team_details[:team_name]
     end
-    team_names_array
+    return team_names_array
   end
-
- #def team_names #expect a new array
-   #team_names_array = []
-   #game_hash.each do |team_side, team_details|
-    # if team_side == :team_name
-     #team_names_array << team_name.values
-  #end
-#end
-    #return team_names_array.flatten
- #end
