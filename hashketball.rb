@@ -153,14 +153,28 @@ def game_hash
     return team_names_array
   end
 
-def player_numbers(team_side) #accepts an argument and #expects an a new array of numbers
-     team_side_array = []
-     game_hash.each do |team_side, team_details|
-       team_details[:players].each do | name_key, player_stats|
-         if team_details[:team_name] == team
-           team_side_array << player_stats[:number]
-         end
-       end
-     end
-     return team_side_array
-   end
+#def player_numbers(team_side) #accepts an argument and #expects an a new array of numbers
+     #team_side_array = []
+     #game_hash.each do |team_side, team_details|
+       #team_details[:players].each do | name_key, player_stats|
+        # if team_details[:team_name] == team
+           #team_side_array << player_stats[:number]
+        # end
+       #end
+     #end
+     #return team_side_array
+   #end
+
+
+   
+  def player_numbers(team_side)    
+      arr = []
+      game_hash.each do |home_away, info|
+        info[:players].each do |name, other|
+          if info[:team_name] == team
+            arr << other[:number]
+          end
+        end
+      end
+      arr
+    end
