@@ -167,7 +167,7 @@ def game_hash
 
 
 
-  def player_numbers(team_side)
+  def player_numbers(team)
       arr = []
       game_hash.each do |home_away, info|
         info[:players].each do |name, other|
