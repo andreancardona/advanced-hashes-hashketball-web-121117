@@ -122,3 +122,4 @@ def game_hash
          return game_hash[team_side][:players][player_name][:points]
        end
      end
+  end 
