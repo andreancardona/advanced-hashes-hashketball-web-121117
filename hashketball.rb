@@ -146,7 +146,7 @@ def game_hash
  end
 
  def team_names
-    team_names_arrayarr = []
+    team_names_array = []
    game_hash.each do |team_side, team_details|
       team_names_array << team_details[:team_name]
     end
