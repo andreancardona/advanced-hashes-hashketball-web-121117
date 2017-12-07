@@ -132,9 +132,17 @@ def game_hash
  puts player_names.class
  puts player_names.count
 
+
+ #def get_all_player_names
+#game_hash.values.collect do | team_details |
+  #team_details[:players].keys
+#end.flatten
+#end
+
+
  def num_points_scored(player_name)
     game_hash.each do |team_side, team_details|
-      return game_hash[team][:players][player_name][:points] if game_hash[team][:players][player_name]
+      return game_hash[team_side][:players][player_name][:points] if game_hash[team_side][:players][player_name]
     end
   end
 
