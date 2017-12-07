@@ -170,7 +170,7 @@ def player_numbers(team) #accepts an argument and #expects an a new array of num
     rebound = 0
     shoe_size = 0
     game_hash.each do |team_side, team_details|
-    team_details[:players].each do | name_key, player_stats|
+    team_details[:players].each do | player_name_key, player_stats|
        if player_stats[:shoe] > shoe_size
          shoe_size = player_stats[:shoe]
          rebound = player_stats[:rebounds]
